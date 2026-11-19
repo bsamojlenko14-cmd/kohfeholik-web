@@ -2,7 +2,7 @@
 :root {
   --espresso: #3B2A20;
   --kava: #6B4A35;
-  --karamel: #B5602A;
+  --karamel: #A85723;
   --karamel-dark: #94491C;
   --smotana: #F7F1E8;
   --pena: #FFFDF9;
@@ -238,7 +238,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
   width: 100%; min-height: 46px; padding: 10px 12px; font: inherit; color: var(--espresso);
   background: #fff; border: 2px solid #CDBBA6; border-radius: 10px;
 }
-input:focus, select:focus, textarea:focus { border-color: var(--karamel); outline: none; box-shadow: 0 0 0 3px rgba(181, 96, 42, .25); }
+input:focus, select:focus, textarea:focus { border-color: var(--karamel); outline: none; box-shadow: 0 0 0 3px rgba(168, 87, 35, .35); }
 input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--bordo); }
 .hint { font-size: .85rem; color: var(--siva); margin: 4px 0 0; }
 .error { font-size: .88rem; color: var(--bordo); font-weight: 600; margin: 4px 0 0; min-height: 0; }
@@ -299,3 +299,8 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--bo
 .social-row { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
 .social-row a { font-weight: 600; }
 @media (min-width: 600px) { .form-row-2 { grid-template-columns: 1fr 1fr; } }
+
+/* Prístupnosť: viditeľný fokus aj na mape a dátume, nič nepreteká pri zoome 200 % */
+.hero { overflow-x: clip; }
+.map-wrap:focus-within, .map-wrap.is-focused { outline: 3px solid var(--karamel); outline-offset: 3px; }
+input[type="date"]:focus-within { border-color: var(--karamel); box-shadow: 0 0 0 3px rgba(168, 87, 35, .35); outline: none; }

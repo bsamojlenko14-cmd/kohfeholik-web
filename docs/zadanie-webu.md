@@ -60,9 +60,13 @@ Väzba potreba → funkcia → miesto na webe:
 
 ## 4. Obrazovky
 
-Obrazovky vychádzajú z papierového prototypu (`docs/prototyp/papierovy-prototyp.png`). Klikateľný wireframe je v `docs/prototyp/index.html`, obrázky obrazoviek sú v `docs/prototyp/`.
+Obrazovky vychádzajú z papierového prototypu (`docs/prototyp/papierovy-prototyp.png`). Doplnkový klikateľný wireframe s reálnymi textami je v `docs/prototyp/index.html`, obrázky obrazoviek sú v `docs/prototyp/`.
 
 ![Papierový prototyp](prototyp/papierovy-prototyp.png)
+
+Interaktívny prototyp v MagicPath (4 mobilné obrazovky prekreslené z fotky papiera, prepojené tlačidlami):
+
+![Interaktívny prototyp v MagicPath](prototyp/magicpath-prototyp.png)
 
 ![Domov](prototyp/1-domov.png)
 

@@ -71,6 +71,18 @@
     todayRow.querySelector('th').insertAdjacentHTML('beforeend', ' <span class="visually-hidden">(dnes)</span>');
   }
 
+  // --- Viditeľný fokus na mape (iframe) pri ovládaní klávesnicou ---
+  var mapWrap = document.querySelector('.map-wrap');
+  if (mapWrap) {
+    window.addEventListener('blur', function () {
+      setTimeout(function () {
+        if (document.activeElement && document.activeElement.tagName === 'IFRAME') mapWrap.classList.add('is-focused');
+      }, 0);
+    });
+    window.addEventListener('focus', function () { mapWrap.classList.remove('is-focused'); });
+    document.addEventListener('focusin', function () { mapWrap.classList.remove('is-focused'); });
+  }
+
   // --- Filter menu ---
   var filters = document.querySelectorAll('.filter');
   var products = document.querySelectorAll('.product');

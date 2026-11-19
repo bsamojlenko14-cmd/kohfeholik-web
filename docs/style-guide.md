@@ -17,7 +17,7 @@ kaviareň, prehľadná a čitateľná aj na mobile.
 |---|---|---|
 | Espresso | `#3B2A20` | hlavný text, pätička, tmavé pozadie |
 | Káva | `#6B4A35` | nadpisy sekcií, ikony |
-| Karamel | `#B5602A` | hlavné tlačidlá (Rezervovať), odkazy, zvýraznenie |
+| Karamel | `#A85723` | hlavné tlačidlá (Rezervovať), odkazy, zvýraznenie |
 | Karamel tmavý | `#94491C` | tlačidlo pri prechode myšou |
 | Smotana | `#F7F1E8` | pozadie stránky |
 | Mliečna pena | `#FFFDF9` | pozadie kariet a formulárov |
@@ -26,7 +26,7 @@ kaviareň, prehľadná a čitateľná aj na mobile.
 | Sivá text | `#5C5048` | doplnkový text (popisy, poznámky) |
 
 Kontrast: všetky kombinácie textu a pozadia spĺňajú WCAG AA (min. 4,5 : 1),
-biely text na karamelovom tlačidle `#B5602A` ≈ 4,6 : 1.
+biely text na karamelovom tlačidle `#A85723` ≈ 5,0 : 1 (overené nástrojom Lighthouse).
 
 ## Písma
 

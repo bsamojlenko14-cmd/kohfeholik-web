@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezervácia stola a catering — Kohfeholik</title>
+  <meta name="description" content="Rezervuj si stôl v kaviarni Kohfeholik online alebo objednaj catering. Vyber dátum, čas a počet osôb, bez telefonovania.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-reservation">
+  <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Kohfeholik — domov">
+        <img src="img/favicon.svg" alt="" width="36" height="36">
+        <span>Kohfeholik</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hlavne-menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Otvoriť menu</span>
+      </button>
+      <nav id="hlavne-menu" class="main-nav" aria-label="Hlavné menu">
+        <ul>
+          <li><a href="index.html#o-nas">O nás</a></li>
+          <li><a href="ponuka.html">Ponuka</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+          <li><a href="rezervacia.html" class="btn btn-primary btn-small" aria-current="page">Rezervácia / catering</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" class="section page-top">
+    <div class="container reservation-layout">
+      <div class="reservation-intro">
+        <p class="eyebrow">Online rezervácia</p>
+        <h1>Rezervácia stola a catering</h1>
+        <p class="lead">Bez telefonovania. Potvrdenie ti príde e-mailom do 15 minút.</p>
+        <ul class="intro-list">
+          <li>Stôl so zásuvkou pre prácu na notebooku</li>
+          <li>Veľký stôl pre partiu do 10 ľudí</li>
+          <li>Catering na akciu od 10 do 80 ľudí</li>
+          <li>Rezervovaný stôl držíme 15 minút</li>
+        </ul>
+        <div class="card repeat-box" id="repeat-box" hidden>
+          <p><strong>Rýchla rezervácia</strong><br><span id="repeat-text"></span></p>
+          <button type="button" class="btn btn-secondary btn-small" id="repeat-btn">Vyplniť ako minule</button>
+        </div>
+      </div>
+
+      <div class="card form-card">
+        <form id="reservation-form" novalidate>
+          <fieldset>
+            <legend>1. Výber služby a dátumu</legend>
+            <div class="field">
+              <span class="label" id="sluzba-label">Služba</span>
+              <div class="choice-group" role="radiogroup" aria-labelledby="sluzba-label">
+                <label class="choice"><input type="radio" name="sluzba" value="stol" checked> Rezervácia stola</label>
+                <label class="choice"><input type="radio" name="sluzba" value="catering"> Catering na akciu</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="datum">Dátum <span class="req" aria-hidden="true">*</span></label>
+                <input type="date" id="datum" name="datum" required aria-describedby="datum-err">
+                <p class="error" id="datum-err"></p>
+              </div>
+              <div class="field">
+                <label for="cas" id="cas-label">Čas <span class="req" aria-hidden="true">*</span></label>
+                <select id="cas" name="cas" required aria-describedby="cas-err">
+                  <option value="">Vyber čas</option>
+                </select>
+                <p class="error" id="cas-err"></p>
+              </div>
+              <div class="field">
+                <label for="osoby">Počet ľudí <span class="req" aria-hidden="true">*</span></label>
+                <input type="number" id="osoby" name="osoby" min="1" max="10" value="2" required aria-describedby="osoby-hint osoby-err">
+                <p class="hint" id="osoby-hint">1 – 10 osôb.</p>
+                <p class="error" id="osoby-err"></p>
+              </div>
+            </div>
+            <div class="field" id="stol-field">
+              <span class="label" id="stol-label">Typ stola</span>
+              <div class="choice-group" role="radiogroup" aria-labelledby="stol-label">
+                <label class="choice"><input type="radio" name="stol" value="Ľubovoľný" checked> Ľubovoľný</label>
+                <label class="choice"><input type="radio" name="stol" value="So zásuvkou (práca)"> So zásuvkou (práca)</label>
+                <label class="choice"><input type="radio" name="stol" value="Pri okne"> Pri okne</label>
+                <label class="choice"><input type="radio" name="stol" value="Veľký stôl pre skupinu"> Veľký stôl pre skupinu</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Kontaktné údaje</legend>
+            <div class="form-row form-row-2">
+              <div class="field">
+                <label for="meno">Meno <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="meno" name="meno" autocomplete="given-name" required aria-describedby="meno-err">
+                <p class="error" id="meno-err"></p>
+              </div>
+              <div class="field">
+                <label for="priezvisko">Priezvisko <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="priezvisko" name="priezvisko" autocomplete="family-name" required aria-describedby="priezvisko-err">
+                <p class="error" id="priezvisko-err"></p>
+              </div>
+              <div class="field">
+                <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-err">
+                <p class="error" id="email-err"></p>
+              </div>
+              <div class="field">
+                <label for="telefon">Telefón <span id="tel-req" class="req" aria-hidden="true" hidden>*</span></label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+421 …" aria-describedby="telefon-err">
+                <p class="error" id="telefon-err"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Poznámka (nepovinné)</legend>
+            <div class="field">
+              <label for="poznamka" id="poznamka-label">Máš špeciálne želanie?</label>
+              <textarea id="poznamka" name="poznamka" rows="3" placeholder="Napr. oslava narodenín, detská stolička, alergia…"></textarea>
+            </div>
+          </fieldset>
+
+          <p class="form-note"><span class="req" aria-hidden="true">*</span> povinné polia</p>
+          <button type="submit" class="btn btn-primary btn-wide" id="submit-btn">Potvrdiť rezerváciu</button>
+        </form>
+
+        <div class="confirmation" id="confirmation" hidden tabindex="-1">
+          <div class="check" aria-hidden="true">✓</div>
+          <h2 id="conf-title">Ďakujeme, rezervácia je prijatá!</h2>
+          <p id="conf-text">Potvrdenie pošleme na <strong id="conf-email"></strong> do 15 minút.</p>
+          <dl class="summary" id="conf-summary"></dl>
+          <div class="hero-actions">
+            <a href="index.html" class="btn btn-secondary">Späť na úvod</a>
+            <a href="ponuka.html" class="btn btn-primary">Pozrieť ponuku</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">Kohfeholik</p>
+        <p>Hurbanova 12, 010 01 Žilina<br>Po – Pi 7:30 – 20:00 · So – Ne 9:00 – 20:00<br>
+        <a href="tel:+421900123456">+421 900 123 456</a> · <a href="mailto:ahoj@kohfeholik.sk">ahoj@kohfeholik.sk</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Sleduj nás</p>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Rýchle odkazy</p>
+        <ul class="social">
+          <li><a href="ponuka.html">Ponuka a cenník</a></li>
+          <li><a href="rezervacia.html">Rezervácia stola</a></li>
+          <li><a href="rezervacia.html?sluzba=catering">Catering</a></li>
+          <li><a href="index.html#kontakt">Kontakt a mapa</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="container footer-note">© 2026 Kohfeholik · Školský projekt (UNIZA, predmet Návrh a tvorba webových stránok) — fiktívna kaviareň.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

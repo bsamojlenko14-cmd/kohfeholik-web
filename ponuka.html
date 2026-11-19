@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ponuka a cenník — Kohfeholik</title>
+  <meta name="description" content="Ponuka kaviarne Kohfeholik s cenami: horúce nápoje, dezerty a raňajky, chladené nápoje, vegánske a sezónne položky, alergény.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Kohfeholik — domov">
+        <img src="img/favicon.svg" alt="" width="36" height="36">
+        <span>Kohfeholik</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hlavne-menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Otvoriť menu</span>
+      </button>
+      <nav id="hlavne-menu" class="main-nav" aria-label="Hlavné menu">
+        <ul>
+          <li><a href="index.html#o-nas">O nás</a></li>
+          <li><a href="ponuka.html" aria-current="page">Ponuka</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+          <li><a href="rezervacia.html" class="btn btn-primary btn-small">Rezervácia / catering</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" class="section page-top">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Ponuka a cenník</p>
+        <h1>Čo si dáš?</h1>
+        <p>Aktuálna ponuka s cenami. Vyber kategóriu alebo si pozri všetko. Rastlinné mlieka sú bez príplatku.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrovať ponuku">
+        <button class="filter is-active" data-filter="vsetko" aria-pressed="true">Všetko</button>
+        <button class="filter" data-filter="horuce" aria-pressed="false">Horúce nápoje</button>
+        <button class="filter" data-filter="dezerty" aria-pressed="false">Dezerty a raňajky</button>
+        <button class="filter" data-filter="chladene" aria-pressed="false">Chladené nápoje</button>
+        <button class="filter" data-filter="veganske" aria-pressed="false">Vegánske</button>
+        <button class="filter" data-filter="sezonne" aria-pressed="false">Sezónne</button>
+      </div>
+      <p class="visually-hidden" id="filter-status" aria-live="polite"></p>
+
+        <section class="menu-group" id="horuce" aria-labelledby="horuce-h">
+          <h2 class="group-title" id="horuce-h"><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-cup"/></svg>Horúce nápoje</h2>
+          <ul class="menu-grid">
+          <li class="card product" data-cat="horuce veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: šálka espressa"><use href="img/sprite.svg#il-cup"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Espresso</h3><span class="price">2,20 €</span></div>
+              <p>Výberová zmes z Brazílie a Etiópie, tóny čokolády a orieškov.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: šálka cappuccina"><use href="img/sprite.svg#il-cup"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Cappuccino</h3><span class="price">3,20 €</span></div>
+              <p>Espresso s hustou mliečnou penou. Aj s rastlinným mliekom.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: flat white v pohári"><use href="img/sprite.svg#il-latte"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Flat white</h3><span class="price">3,40 €</span></div>
+              <p>Dvojité espresso s jemne našľahaným mliekom.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: latte s ovseným mliekom"><use href="img/sprite.svg#il-latte"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Ovsené latte</h3><span class="price">3,60 €</span></div>
+              <p>Espresso s ovseným mliekom, krémové a jemne sladké.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 1</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce sezonne">
+            <span class="badge">Novinka</span>
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: tekvicové latte so šľahačkou"><use href="img/sprite.svg#il-seasonal"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Tekvicové latte</h3><span class="price">4,20 €</span></div>
+              <p>Jesenná klasika: tekvicové pyré, škorica, muškátový oriešok.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li><li class="tag tag-season">jeseň</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce sezonne veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: horúci jablkový chai"><use href="img/sprite.svg#il-seasonal"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Jablkový chai</h3><span class="price">3,90 €</span></div>
+              <p>Čierny čaj s korením, jablkovým muštom a ovseným mliekom.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag tag-season">jeseň</li></ul>
+            </div>
+          </li>
+          </ul>
+        </section>
+
+        <section class="menu-group" id="dezerty" aria-labelledby="dezerty-h">
+          <h2 class="group-title" id="dezerty-h"><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-heart"/></svg>Dezerty a raňajky</h2>
+          <ul class="menu-grid">
+          <li class="card product" data-cat="dezerty">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: maslový croissant"><use href="img/sprite.svg#il-croissant"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Maslový croissant</h3><span class="price">2,60 €</span></div>
+              <p>Každé ráno čerstvo upečený. Ku káve do 10:00 za 1,90 €.</p>
+              <ul class="tags"><li class="tag">alergény: 1, 3, 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: avokádový toast"><use href="img/sprite.svg#il-toast"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Avokádový toast</h3><span class="price">6,50 €</span></div>
+              <p>Kváskový chlieb, avokádo, cherry paradajky, klíčky. Raňajky do 11:00.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 1</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: miska granoly s jogurtom a ovocím"><use href="img/sprite.svg#il-granola"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Granola s jogurtom</h3><span class="price">5,40 €</span></div>
+              <p>Domáca granola, grécky jogurt, sezónne ovocie a med.</p>
+              <ul class="tags"><li class="tag">alergény: 1, 7, 8</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: kúsok cheesecaku s malinou"><use href="img/sprite.svg#il-cake"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Malinový cheesecake</h3><span class="price">4,50 €</span></div>
+              <p>Pečený cheesecake na maslovom korpuse, malinová omáčka.</p>
+              <ul class="tags"><li class="tag">alergény: 1, 3, 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: vegánsky čokoládový koláč"><use href="img/sprite.svg#il-cake"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Vegánsky brownie</h3><span class="price">3,80 €</span></div>
+              <p>Tmavá čokoláda, vlašské orechy, bez vajec a mlieka.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 1, 8</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: misa so zeleninou a hummusom"><use href="img/sprite.svg#il-bowl"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Buddha bowl</h3><span class="price">8,90 €</span></div>
+              <p>Quinoa, hummus, pečená tekvica, avokádo, tahini dresing.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 11</li></ul>
+            </div>
+          </li>
+          </ul>
+        </section>
+
+        <section class="menu-group" id="chladene" aria-labelledby="chladene-h">
+          <h2 class="group-title" id="chladene-h"><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-ice"/></svg>Chladené nápoje</h2>
+          <ul class="menu-grid menu-grid-4">
+          <li class="card product" data-cat="chladene">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: ľadové latte"><use href="img/sprite.svg#il-iced"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Ľadové latte</h3><span class="price">3,90 €</span></div>
+              <p>Espresso, studené mlieko a ľad. Aj s rastlinným mliekom.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="chladene veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: cold brew s ľadom"><use href="img/sprite.svg#il-iced"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Cold brew</h3><span class="price">3,70 €</span></div>
+              <p>Káva lúhovaná 16 hodín za studena, jemná a osviežujúca.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="chladene veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: domáca citrónová limonáda"><use href="img/sprite.svg#il-lemonade"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Domáca limonáda</h3><span class="price">3,50 €</span></div>
+              <p>Citrón, mäta a trstinový cukor. 0,4 l.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="chladene veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: ľadová matcha"><use href="img/sprite.svg#il-iced"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Ľadová matcha</h3><span class="price">4,30 €</span></div>
+              <p>Japonský čaj matcha s ovseným mliekom a ľadom.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 1</li></ul>
+            </div>
+          </li>
+          </ul>
+        </section>
+
+      <details class="allergens">
+        <summary>Zoznam alergénov</summary>
+        <p>1 lepok · 3 vajcia · 7 mlieko · 8 orechy · 11 sezam. Na požiadanie vám obsluha povie zloženie každého jedla.</p>
+      </details>
+      <div class="card cta-band">
+        <div><h2>Chceš si istý stôl?</h2><p>Rezervuj online za minútu, bez telefonovania.</p></div>
+        <a href="rezervacia.html" class="btn btn-primary">Rezervovať stôl</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">Kohfeholik</p>
+        <p>Hurbanova 12, 010 01 Žilina<br>Po – Pi 7:30 – 20:00 · So – Ne 9:00 – 20:00<br>
+        <a href="tel:+421900123456">+421 900 123 456</a> · <a href="mailto:ahoj@kohfeholik.sk">ahoj@kohfeholik.sk</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Sleduj nás</p>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Rýchle odkazy</p>
+        <ul class="social">
+          <li><a href="ponuka.html">Ponuka a cenník</a></li>
+          <li><a href="rezervacia.html">Rezervácia stola</a></li>
+          <li><a href="rezervacia.html?sluzba=catering">Catering</a></li>
+          <li><a href="index.html#kontakt">Kontakt a mapa</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="container footer-note">© 2026 Kohfeholik · Školský projekt (UNIZA, predmet Návrh a tvorba webových stránok) — fiktívna kaviareň.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

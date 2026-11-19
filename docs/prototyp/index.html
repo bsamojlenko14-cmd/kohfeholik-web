@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kohfeholik — interaktívny prototyp (wireframe)</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #e9e9e9; color: #333; }
+  .bar { background: #333; color: #fff; padding: 8px 16px; font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .bar a { color: #ffd; }
+  .screen { display: none; width: 960px; max-width: calc(100% - 24px); margin: 16px auto; background: #fff; border: 3px solid #333; padding: 18px; box-sizing: border-box; }
+  .screen:target, .screen.default { display: block; }
+  .screen:target ~ .screen.default { display: none; }
+  .hdr { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+  .logo { border: 2px solid #333; border-radius: 50%; padding: 6px 14px; font-weight: bold; text-decoration: none; color: #333; }
+  .nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .nav a { color: #333; text-decoration: underline; padding: 4px 2px; transition: color .15s, background .15s; }
+  .nav a:hover, .nav a.on { color: #fff; background: #555; text-decoration: none; }
+  .btn { display: inline-block; border: 2px solid #222; border-radius: 20px; padding: 7px 16px; font-weight: bold; color: #222; text-decoration: none; background: #fff; transition: background .15s; }
+  .btn.p { background: #ddd; }
+  .btn:hover { background: #bbb; }
+  .box { border: 2px solid #555; border-radius: 6px; padding: 12px; box-sizing: border-box; }
+  .img { border: 2px solid #555; min-height: 90px; background:
+    linear-gradient(to top right, transparent 49%, #888 49.5%, #888 50.5%, transparent 51%),
+    linear-gradient(to top left, transparent 49%, #888 49.5%, #888 50.5%, transparent 51%); }
+  .circle { width: 84px; height: 84px; border-radius: 50%; border: 2px solid #555; margin: 0 auto 6px; }
+  .wave { height: 9px; margin: 7px 0; background: repeating-linear-gradient(90deg, #aaa 0 8px, transparent 8px 12px); border-radius: 4px; }
+  .grid { display: grid; gap: 12px; }
+  .g3 { grid-template-columns: repeat(3, 1fr); } .g4 { grid-template-columns: repeat(4, 1fr); } .g6 { grid-template-columns: repeat(6, 1fr); }
+  .note { color: #1a4fa0; font-style: italic; font-size: 13px; }
+  h1 { font-size: 24px; margin: 6px 0; } h2 { font-size: 19px; margin: 14px 0 8px; }
+  .field { border: 2px solid #555; height: 30px; border-radius: 4px; margin: 4px 0 12px; background: #fff; }
+  label { font-size: 14px; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; } .row > * { flex: 1; min-width: 160px; }
+  .ft { border-top: 2px solid #333; margin-top: 16px; padding-top: 10px; font-size: 13px; }
+  .small { font-size: 13px; }
+  @media (max-width: 700px) { .g3, .g4 { grid-template-columns: 1fr 1fr; } .g6 { grid-template-columns: repeat(3, 1fr); } }
+</style>
+</head>
+<body>
+<div class="bar">Interaktívny prototyp — Kohfeholik (wireframe podľa papierového prototypu). Klikaj na tlačidlá a odkazy.
+  Obrazovky: <a href="#domov">Domov</a> <a href="#ponuka">Ponuka</a> <a href="#kontakt">O nás / Kontakt</a> <a href="#rezervacia">Rezervácia</a> <a href="#potvrdenie">Potvrdenie</a></div>
+
+<!-- 1 PONUKA -->
+<section class="screen" id="ponuka">
+  <div class="hdr"><a class="logo" href="#domov">Logo</a>
+    <nav class="nav"><a href="#kontakt">O nás</a><a href="#ponuka" class="on">Ponuka</a><a href="#kontakt">Kontakt</a><a class="btn p" href="#rezervacia">Rezervácia / catering</a></nav></div>
+  <h1>Ponuka a cenník</h1>
+  <div class="row small" style="flex:none"><span class="btn p">Všetko</span><span class="btn">Horúce nápoje</span><span class="btn">Dezerty a raňajky</span><span class="btn">Chladené nápoje</span><span class="btn">Vegánske</span><span class="btn">Sezónne</span></div>
+  <p class="note">← filter (doplnené: roztriedenie ponuky)</p>
+  <h2>Horúce nápoje</h2>
+  <div class="grid g6 small">
+    <div><div class="circle"></div>Espresso 2,20 €</div><div><div class="circle"></div>Cappuccino 3,20 €</div><div><div class="circle"></div>Flat white 3,40 €</div>
+    <div><div class="circle"></div>Ovsené latte 3,60 €</div><div><div class="circle"></div>Tekvicové latte 4,20 €</div><div><div class="circle"></div>Jablkový chai 3,90 €</div>
+  </div>
+  <h2>Dezerty a raňajky</h2>
+  <div class="grid g4 small">
+    <div class="box"><div class="img"></div>Croissant 2,60 €</div><div class="box"><div class="img"></div>Avokádový toast 6,50 €</div>
+    <div class="box"><div class="img"></div>Granola 5,40 €</div><div class="box"><div class="img"></div>Cheesecake 4,50 €</div>
+  </div>
+  <h2>Chladené nápoje</h2>
+  <div class="grid g4 small">
+    <div class="box"><div class="img"></div>Ľadové latte 3,90 €</div><div class="box"><div class="img"></div>Cold brew 3,70 €</div>
+    <div class="box"><div class="img"></div>Limonáda 3,50 €</div><div class="box"><div class="img"></div>Ľadová matcha 4,30 €</div>
+  </div>
+  <div class="box small" style="margin-top:12px">▸ Zoznam alergénov <span class="note">(doplnené)</span></div>
+  <p style="margin-top:14px"><a class="btn p" href="#rezervacia">Rezervovať stôl</a></p>
+  <div class="ft">Pätička: adresa · hodiny · kontakt · sociálne siete</div>
+</section>
+
+<!-- 2 KONTAKT / O NAS -->
+<section class="screen" id="kontakt">
+  <div class="hdr"><a class="logo" href="#domov">Logo</a>
+    <nav class="nav"><a href="#kontakt" class="on">O nás</a><a href="#ponuka">Ponuka</a><a href="#kontakt">Kontakt</a><a class="btn p" href="#rezervacia">Rezervácia / catering</a></nav></div>
+  <div class="box"><h1>Kto sme</h1><div class="wave"></div><div class="wave" style="width:70%"></div></div>
+  <div class="grid g3" style="margin-top:12px"><div class="img"></div><div class="img"></div><div class="img"></div></div>
+  <p class="note">fotky interiéru + detaily: Wi-Fi a zásuvky, parkovanie, catering, kariéra (doplnené z mind mapy)</p>
+  <div class="grid g3" style="margin-top:8px">
+    <div class="box"><h2>Adresa</h2><div class="wave"></div><a class="btn" href="#kontakt">Navigovať</a></div>
+    <div class="box"><h2>Hodiny</h2>Po – Pi 7:30 – 20:00<br>So – Ne 9:00 – 20:00</div>
+    <div class="box"><h2>Kontakty, sociálne siete</h2>telefón · e-mail<br>Instagram · Facebook</div>
+  </div>
+  <div class="img" style="height:140px;margin-top:12px"></div><p class="note">Google mapa (doplnené z mind mapy)</p>
+  <div class="ft">Pätička</div>
+</section>
+
+<!-- 3 REZERVACIA -->
+<section class="screen" id="rezervacia">
+  <div class="hdr"><a class="logo" href="#domov">Logo</a>
+    <nav class="nav"><a href="#kontakt">O nás</a><a href="#ponuka">Ponuka</a><a href="#kontakt">Kontakt</a><a class="btn p" href="#rezervacia">Rezervácia / catering</a></nav></div>
+  <h1>Rezervácia stola a catering</h1>
+  <div class="box"><b>Výber služby a dátumu</b><br>
+    <span class="small">( • ) Rezervácia stola &nbsp; ( ) Catering na akciu</span>
+    <div class="row"><div><label>Dátum *</label><div class="field"></div></div><div><label>Čas *</label><div class="field"></div></div><div><label>Počet ľudí *</label><div class="field"></div></div></div>
+    <span class="small">Typ stola: ( ) ľubovoľný ( ) so zásuvkou ( ) pri okne ( ) pre skupinu</span> <span class="note">(doplnené pre persónu Maxim)</span>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <div><label>Meno *</label><div class="field"></div></div><div><label>Priezvisko *</label><div class="field"></div></div></div>
+  <div class="row"><div><label>E-mail *</label><div class="field"></div></div><div><label>Telefón</label><div class="field"></div></div></div>
+  <label>Poznámka</label><div class="field" style="height:50px"></div>
+  <a class="btn p" href="#potvrdenie" style="display:block;text-align:center">Potvrdiť rezerváciu</a>
+  <p class="note">→ prázdne povinné pole: chybová hláška pri poli; správne vyplnené: Potvrdenie</p>
+</section>
+
+<!-- 4 POTVRDENIE -->
+<section class="screen" id="potvrdenie">
+  <div class="hdr"><a class="logo" href="#domov">Logo</a>
+    <nav class="nav"><a href="#kontakt">O nás</a><a href="#ponuka">Ponuka</a><a href="#kontakt">Kontakt</a><a class="btn p" href="#rezervacia">Rezervácia / catering</a></nav></div>
+  <div style="text-align:center"><div style="font-size:40px">✓</div><h1>Ďakujeme, rezervácia je prijatá!</h1><p class="small">Potvrdenie pošleme e-mailom do 15 minút.</p>
+  <div class="box small" style="max-width:320px;margin:0 auto;text-align:left">Služba · Dátum · Čas · Počet ľudí · Stôl · Meno</div>
+  <p><a class="btn" href="#domov">Späť na úvod</a> <a class="btn p" href="#ponuka">Pozrieť ponuku</a></p></div>
+</section>
+
+<!-- 0 DOMOV (default, posledná kvôli :target pravidlu) -->
+<section class="screen default" id="domov">
+  <div class="hdr"><a class="logo" href="#domov">Logo</a>
+    <nav class="nav"><a href="#kontakt">O nás</a><a href="#ponuka">Ponuka</a><a href="#kontakt">Kontakt</a><a class="btn p" href="#rezervacia">Rezervácia / catering</a></nav></div>
+  <div class="row" style="align-items:stretch">
+    <div style="flex:1.2"><h1>Dobrá káva, tiché miesto na prácu a stôl za minútu</h1><div class="wave"></div>
+      <div class="box small" style="display:inline-block;margin:6px 0">🕒 Teraz otvorené · dnes do 20:00</div> <span class="note">(doplnené: hodiny hneď hore)</span><br>
+      <a class="btn p" href="#rezervacia">Rezervovať stôl</a> <a class="btn" href="#ponuka">Pozrieť ponuku</a></div>
+    <div class="img" style="flex:.8;min-height:150px"></div>
+  </div>
+  <div class="grid g4 small" style="margin-top:12px"><div class="box">Hodiny</div><div class="box">Adresa</div><div class="box">Wi-Fi + zásuvky</div><div class="box">Rastlinné mlieka</div></div>
+  <h2>Info — prečo u nás</h2>
+  <div class="grid g3 small"><div class="box">Káva<div class="wave"></div></div><div class="box">Miesto na prácu<div class="wave"></div></div><div class="box">Pre každého<div class="wave"></div></div></div>
+  <h2>Z našej ponuky</h2>
+  <div class="grid g3 small">
+    <a class="box" href="#ponuka" style="color:#333">▭ Flat white</a><a class="box" href="#ponuka" style="color:#333">▭ Tekvicové latte</a><a class="box" href="#ponuka" style="color:#333">▭ Ľadové latte</a>
+    <a class="box" href="#ponuka" style="color:#333">▭ Avokádový toast</a><a class="box" href="#ponuka" style="color:#333">▭ Cheesecake</a><a class="box" href="#ponuka" style="color:#333">▭ Limonáda</a>
+  </div>
+  <p style="text-align:center"><a class="btn p" href="#ponuka">Celá ponuka</a></p>
+  <div class="ft">Pätička: adresa · hodiny · kontakt · Instagram / Facebook / TikTok</div>
+</section>
+</body>
+</html>

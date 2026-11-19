@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kohfeholik — kaviareň v centre Žiliny</title>
+  <meta name="description" content="Kaviareň Kohfeholik v Žiline: výberová káva, raňajky, dezerty, chladené nápoje a catering. Wi-Fi a zásuvky na prácu, online rezervácia stola bez telefonovania.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Kohfeholik — domov">
+        <img src="img/favicon.svg" alt="" width="36" height="36">
+        <span>Kohfeholik</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hlavne-menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Otvoriť menu</span>
+      </button>
+      <nav id="hlavne-menu" class="main-nav" aria-label="Hlavné menu">
+        <ul>
+          <li><a href="index.html#o-nas">O nás</a></li>
+          <li><a href="ponuka.html">Ponuka</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+          <li><a href="rezervacia.html" class="btn btn-primary btn-small">Rezervácia / catering</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Kaviareň v centre Žiliny</p>
+          <h1>Dobrá káva, tiché miesto na prácu a stôl, ktorý si rezervuješ za minútu.</h1>
+          <p class="lead">Výberová káva, raňajky, domáce dezerty a chladené nápoje. Rýchla Wi-Fi, zásuvky pri stoloch a catering na tvoju akciu.</p>
+          <p class="open-status" id="open-status" aria-live="polite"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-clock"/></svg><span>Dnes: 7:30 – 20:00</span></p>
+          <div class="hero-actions">
+            <a href="rezervacia.html" class="btn btn-primary">Rezervovať stôl</a>
+            <a href="ponuka.html" class="btn btn-secondary">Pozrieť ponuku</a>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-hidden="true">
+          <svg viewBox="0 0 160 110" class="hero-illustration"><use href="img/sprite.svg#il-interior"/></svg>
+          <svg viewBox="0 0 120 90" class="hero-cup"><use href="img/sprite.svg#il-cup"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-info" aria-label="Rýchle informácie">
+      <div class="container quick-grid">
+        <div class="quick-item"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-clock"/></svg><div><strong>Po – Pi 7:30 – 20:00</strong><span>So – Ne 9:00 – 20:00</span></div></div>
+        <div class="quick-item"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-pin"/></svg><div><strong>Hurbanova 12, Žilina</strong><span>2 min od Mariánskeho námestia</span></div></div>
+        <div class="quick-item"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-wifi"/></svg><div><strong>Wi-Fi zadarmo</strong><span>12 miest so zásuvkou</span></div></div>
+        <div class="quick-item"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-leaf"/></svg><div><strong>Rastlinné mlieka</strong><span>ovsené, mandľové, sójové — bez príplatku</span></div></div>
+      </div>
+    </section>
+
+    <section id="preco" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-heart"/></svg>Prečo u nás</h2>
+          <p>Kohfeholik je malá kaviareň pre ľudí, ktorí chcú na chvíľu spomaliť — stretnúť sa s priateľmi, pracovať alebo len oddychovať pri dobrej káve.</p>
+        </div>
+        <ul class="why-grid">
+          <li class="card why reveal"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-cup"/></svg><h3>Káva, ktorú pražíme pre vás</h3><p>Výberová káva od lokálnej pražiarne, každý týždeň nová filtrovaná káva.</p></li>
+          <li class="card why reveal"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-wifi"/></svg><h3>Miesto na prácu</h3><p>Rýchla Wi-Fi, 12 miest so zásuvkou a tiché hodiny Po – Pi 9:00 – 12:00.</p></li>
+          <li class="card why reveal"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-leaf"/></svg><h3>Pre každého</h3><p>Vegánske jedlá, rastlinné mlieka bez príplatku a jasne označené alergény.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="z-ponuky" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-cup"/></svg>Z našej ponuky</h2>
+          <p>Najobľúbenejšie položky. Celú ponuku s cenami a alergénmi nájdeš na stránke Ponuka.</p>
+        </div>
+        <ul class="menu-grid">
+          <li class="card product" data-cat="horuce">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: flat white v pohári"><use href="img/sprite.svg#il-latte"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Flat white</h3><span class="price">3,40 €</span></div>
+              <p>Dvojité espresso s jemne našľahaným mliekom.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="horuce sezonne">
+            <span class="badge">Novinka</span>
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: tekvicové latte so šľahačkou"><use href="img/sprite.svg#il-seasonal"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Tekvicové latte</h3><span class="price">4,20 €</span></div>
+              <p>Jesenná klasika: tekvicové pyré, škorica, muškátový oriešok.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li><li class="tag tag-season">jeseň</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="chladene">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: ľadové latte"><use href="img/sprite.svg#il-iced"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Ľadové latte</h3><span class="price">3,90 €</span></div>
+              <p>Espresso, studené mlieko a ľad. Aj s rastlinným mliekom.</p>
+              <ul class="tags"><li class="tag">alergény: 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: avokádový toast"><use href="img/sprite.svg#il-toast"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Avokádový toast</h3><span class="price">6,50 €</span></div>
+              <p>Kváskový chlieb, avokádo, cherry paradajky, klíčky. Raňajky do 11:00.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li><li class="tag">alergény: 1</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="dezerty">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: kúsok cheesecaku s malinou"><use href="img/sprite.svg#il-cake"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Malinový cheesecake</h3><span class="price">4,50 €</span></div>
+              <p>Pečený cheesecake na maslovom korpuse, malinová omáčka.</p>
+              <ul class="tags"><li class="tag">alergény: 1, 3, 7</li></ul>
+            </div>
+          </li>
+          <li class="card product" data-cat="chladene veganske">
+            <svg viewBox="0 0 120 90" class="product-img" role="img" aria-label="Ilustrácia: domáca citrónová limonáda"><use href="img/sprite.svg#il-lemonade"/></svg>
+            <div class="product-body">
+              <div class="product-top"><h3>Domáca limonáda</h3><span class="price">3,50 €</span></div>
+              <p>Citrón, mäta a trstinový cukor. 0,4 l.</p>
+              <ul class="tags"><li class="tag tag-vegan">vegánske</li></ul>
+            </div>
+          </li>
+        </ul>
+        <p class="center-cta"><a href="ponuka.html" class="btn btn-primary">Celá ponuka a cenník</a></p>
+      </div>
+    </section>
+
+    <section id="o-nas" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-people"/></svg>Kto sme</h2>
+          <p>Kohfeholik sme otvorili v roku 2024 ako miesto, kde sa dá v centre Žiliny v pokoji posedieť, pracovať aj osláviť. Kávu pripravujú vyškolení baristi, dezerty pečieme každé ráno sami.</p>
+        </div>
+        <div class="gallery" aria-label="Fotogaléria interiéru">
+          <figure class="card reveal"><svg viewBox="0 0 160 110" class="" role="img" aria-label="Ilustrácia: interiér kaviarne s oknom a lampou"><use href="img/sprite.svg#il-interior"/></svg><figcaption>Svetlý interiér pri okne — 36 miest na sedenie</figcaption></figure>
+          <figure class="card reveal"><svg viewBox="0 0 160 110" class="" role="img" aria-label="Ilustrácia: notebook a káva na stole so zásuvkou"><use href="img/sprite.svg#il-work"/></svg><figcaption>Pracovná zóna so zásuvkami a tichom</figcaption></figure>
+          <figure class="card reveal"><svg viewBox="0 0 160 110" class="" role="img" aria-label="Ilustrácia: skupina priateľov pri stole"><use href="img/sprite.svg#il-friends"/></svg><figcaption>Veľký stôl pre partiu až do 10 ľudí</figcaption></figure>
+        </div>
+        <h3 class="subhead">Detaily, ktoré sa oplatí vedieť</h3>
+        <ul class="details-grid">
+          <li class="card detail"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-wifi"/></svg><h4>Wi-Fi a zásuvky</h4><p>Wi-Fi zadarmo, heslo dostaneš pri bare. 12 miest so zásuvkou — pri rezervácii si ich môžeš vybrať.</p></li>
+          <li class="card detail"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-car"/></svg><h4>Parkovanie</h4><p>Platené parkovisko na Hurbanovej ulici (SMS). Stojany na bicykle pred vchodom.</p></li>
+          <li class="card detail"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-catering"/></svg><h4>Catering</h4><p>Káva, dezerty a raňajky na firemné stretnutia a oslavy. <a href="rezervacia.html?sluzba=catering">Objednať catering</a>.</p></li>
+          <li class="card detail"><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-people"/></svg><h4>Kariéra</h4><p>Hľadáme baristu/baristku na čiastočný úväzok. Napíš nám na <a href="mailto:kariera@kohfeholik.sk">kariera@kohfeholik.sk</a>.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><svg class="icon icon-title" aria-hidden="true"><use href="img/sprite.svg#ic-pin"/></svg>Kontakt</h2>
+        </div>
+        <div class="contact-cards">
+          <div class="card contact-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-pin"/></svg><h3>Adresa</h3>
+            <address>Kaviareň Kohfeholik<br>Hurbanova 12<br>010 01 Žilina</address>
+            <a class="btn btn-primary btn-small" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hurbanova+12,+010+01+%C5%BDilina" target="_blank" rel="noopener">Navigovať</a>
+          </div>
+          <div class="card contact-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-clock"/></svg><h3>Otváracie hodiny</h3>
+            <table class="hours" id="hours-table">
+              <caption class="visually-hidden">Otváracie hodiny podľa dní</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Pondelok</th><td>7:30 – 20:00</td></tr>
+                <tr data-day="2"><th scope="row">Utorok</th><td>7:30 – 20:00</td></tr>
+                <tr data-day="3"><th scope="row">Streda</th><td>7:30 – 20:00</td></tr>
+                <tr data-day="4"><th scope="row">Štvrtok</th><td>7:30 – 20:00</td></tr>
+                <tr data-day="5"><th scope="row">Piatok</th><td>7:30 – 20:00</td></tr>
+                <tr data-day="6"><th scope="row">Sobota</th><td>9:00 – 20:00</td></tr>
+                <tr data-day="0"><th scope="row">Nedeľa</th><td>9:00 – 20:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card contact-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-phone"/></svg><h3>Kontakty a sociálne siete</h3>
+            <ul class="contact-list">
+              <li><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-phone"/></svg><a href="tel:+421900123456">+421 900 123 456</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="img/sprite.svg#ic-mail"/></svg><a href="mailto:ahoj@kohfeholik.sk">ahoj@kohfeholik.sk</a></li>
+            </ul>
+            <ul class="social-row">
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe title="Mapa: Kaviareň Kohfeholik, Hurbanova 12, Žilina" src="https://www.google.com/maps?q=Hurbanova+12,+Žilina&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">Kohfeholik</p>
+        <p>Hurbanova 12, 010 01 Žilina<br>Po – Pi 7:30 – 20:00 · So – Ne 9:00 – 20:00<br>
+        <a href="tel:+421900123456">+421 900 123 456</a> · <a href="mailto:ahoj@kohfeholik.sk">ahoj@kohfeholik.sk</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Sleduj nás</p>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Rýchle odkazy</p>
+        <ul class="social">
+          <li><a href="ponuka.html">Ponuka a cenník</a></li>
+          <li><a href="rezervacia.html">Rezervácia stola</a></li>
+          <li><a href="rezervacia.html?sluzba=catering">Catering</a></li>
+          <li><a href="index.html#kontakt">Kontakt a mapa</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="container footer-note">© 2026 Kohfeholik · Školský projekt (UNIZA, predmet Návrh a tvorba webových stránok) — fiktívna kaviareň.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
